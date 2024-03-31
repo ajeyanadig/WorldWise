@@ -3,7 +3,8 @@
   max-height: 70%;
   background-color: var(--color-dark--2);
   border-radius: 7px;
-  overflow: scroll;
+  overflow: auto;
+  scrollbar-color: rgba(0, 0, 0, 0.409) #242a2e;
 
   width: 100%;
   display: flex;
