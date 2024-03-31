@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import CountriesList from "./components/CountryList";
 import City from "./components/City";
 import Form from "./components/Form";
+import PageNav from "./components/PageNav";
 
 const BASE_URL = "http://localhost:8000";
 
@@ -27,7 +28,6 @@ function App() {
         setCities(data);
       } catch (e) {
         console.log(e);
-        alert("error bro");
       }
       setIsLoading(false);
     }
@@ -39,8 +39,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<Homepage />}></Route>
-          <Route path="product" element={<Product />}></Route>
           <Route path="pricing" element={<Pricing />}></Route>
+          <Route path="product" element={<Product />}></Route>
+          <Route path="login" element={<Login />}></Route>
           <Route path="app" element={<AppLayout />}>
             <Route index element={<Navigate replace to="cities" />} />
             <Route
@@ -54,7 +55,7 @@ function App() {
             />
             <Route path="form" element={<Form />} />
           </Route>
-          <Route path="/login" element={<Login />}></Route>
+
           <Route path="*" element={<PageNotFound />}></Route>
         </Routes>
       </BrowserRouter>
