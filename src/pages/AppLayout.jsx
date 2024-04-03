@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Map from "../components/Map";
 import Sidebar from "../components/Sidebar";
 import styles from "./AppLayout.module.css";
+import User from "../components/User";
 
 function AppLayout() {
   return (
@@ -10,6 +11,7 @@ function AppLayout() {
         <Outlet />
       </Sidebar>
       <Map />
+      <User />
     </div>
   );
 }
